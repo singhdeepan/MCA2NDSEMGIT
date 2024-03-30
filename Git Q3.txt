@@ -1,0 +1,26 @@
+Q3) To create a GitHub repository, clone it, make changes, commit them, and push them back to the remote repository, follow these steps:
+
+- Create a GitHub repository:
+  - Go to GitHub and click on "New" to create a new repository.
+  - Follow the instructions to initialize the repository with a README or other options.
+
+- Clone the repository to your local machine:
+bash
+git clone <repository_url>
+cd <repository_name>
+
+
+- Make changes to files:
+  - Edit files in the cloned repository as needed.
+
+- Add changes to the staging area and commit:
+bash
+git add .
+git commit -m "Made changes to the project"
+
+
+- Push changes back to the remote repository:
+bash
+git push origin main
+
+

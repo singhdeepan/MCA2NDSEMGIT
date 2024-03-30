@@ -1,0 +1,26 @@
+Q4) If you accidentally committed a file with sensitive information to a Git repository and pushed it to GitHub, you can take the following steps to remove that file from the commit history and GitHub repository:
+
+- Remove the sensitive file from the working directory and stage the removal:
+bash
+git rm --cached <file_name>
+
+
+- Commit the removal:
+bash
+git commit -m "Removed sensitive file"
+
+
+- Rewrite the commit history to exclude the sensitive file:
+bash
+git rebase -i HEAD~<number_of_commits>
+
+
+- In the interactive rebase editor, delete the line corresponding to the commit that added the sensitive file.
+
+- Force push the rewritten history to the remote repository:
+bash
+git push origin main --force
+
+
+- Additionally, if the sensitive information has been exposed publicly, you may need to invalidate or change the sensitive data to ensure security.
+
